@@ -1,0 +1,53 @@
+.progress {
+  float: right;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.controls {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.controls.dragging {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.controls md-icon {
+  margin: initial;
+}
+
+.controls .primary-controls md-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.controls md-icon.active {
+  color: chartreuse;
+}
+
+.controls .upload-button {
+  position: relative;
+}
+
+.controls .upload-button input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: black;
+  height: 100%;
+}
+
+app-countdown {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}

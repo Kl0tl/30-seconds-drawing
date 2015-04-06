@@ -1,7 +1,9 @@
 import angular from 'angular';
 
-import playlistsModule from './playlists/playlists-module';
+import indexModule from './index/index-module';
 
-const module = angular.module('app', [playlistsModule.name]);
+const module = angular.module('app', [indexModule.name]);
+
+angular.bootstrap(document.querySelector('body'), ['app']);
 
 export default module;

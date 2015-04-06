@@ -1,0 +1,34 @@
+<md-progress-circular md-mode="indeterminate" md-diameter="24"
+    class="progress" ng-show="vm.isLoading"></md-progress-circular>
+
+<div ng-hide="vm.isPaused" ng-click="vm.onClicked()">
+  <div class="image" ng-style="{ 'background-image': 'url(' + vm.current + ')' }"></div>
+  <app-countdown value="vm.countdown"></app-countdown>
+</div>
+
+<div class="controls" ng-show="vm.isPaused" ng-class="{ dragging: isDragging }"
+  layout="column" layout-align="center center"
+  app-file-drop="vm.onFile(file)"
+  app-file-drop-options="{
+    accept: ['image/png', 'image/jpg', 'image/jpeg'],
+    multiple: true
+  }">
+
+  <div class="primary-controls" layout="row">
+    <md-icon md-svg-src="ic_play_arrow_24px.svg" alt="Play"
+      ng-disabled="!vm.canPlay" ng-click="vm.onPlayButtonClicked($event)"></md-icon>
+
+    <div class="upload-button">
+      <input type="file" app-file-input="vm.onFile(file)"
+        accept="image/png, image/jpg, image/jpeg" multiple>
+      <md-icon md-svg-src="ic_file_upload_24px.svg" alt="Upload"></md-icon>
+    </div>
+  </div>
+
+  <div layout="row">
+    <md-icon md-svg-src="ic_shuffle_24px.svg" alt="Shuffle"
+      ng-class="{ active: vm.shouldShuffle }" ng-click="vm.onShuffleButtonClicked()"></md-icon>
+    <md-icon md-svg-src="ic_loop_24px.svg" alt="Cycle"
+      ng-class="{ active: vm.shouldCycle }" ng-click="vm.onCycleButtonClicked()"></md-icon>
+  </div>
+</div>

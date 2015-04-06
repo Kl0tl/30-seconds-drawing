@@ -2,7 +2,8 @@ import template from './countdown-template.html!text';
 
 class CountdownDirective {
   static register(module) {
-    module.directive('appCountdown', this);
+    module.directive('appCountdown',
+      ($injector) => $injector.instantiate(this));
   }
 
   static get $inject() {

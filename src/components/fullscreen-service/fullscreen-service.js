@@ -3,7 +3,7 @@ const FULLSCREEN_ERROR_EVENT = 'fullscreenerror webkitfullscreenerror mozfullscr
 
 class FullscreenService {
   static register(module) {
-    module.service('FullscreenService', this);
+    module.service(this.name, this);
   }
 
   static get $inject() {
@@ -15,20 +15,14 @@ class FullscreenService {
     this.$q = $q;
   }
 
-  get document() {
-    return this.$document[0];
-  }
-
   get isEnabled() {
-    return this.document.fullscreenEnabled
-      || this.document.webkitFullscreeEnabled
-      || this.document.mozFullScreenEnabled;
+    return ['fullscreenEnabled', 'webkitFullscreeEnabled', 'mozFullScreenEnabled']
+      .some((property) => this.$document.prop(property));
   }
 
   get fullscreenElement() {
-    return this.document.fullscreenElement
-      || this.document.webkitFullscreenElement
-      || this.document.mozFullScreenElement;
+    return ['fullscreenElement', 'webkitFullscreeElement', 'mozFullScreenElement']
+      .find((property) => this.$document.prop(property));
   }
 
   request(element) {

@@ -1,11 +1,11 @@
-import angular from 'angular';
+import 'angular-material';
 
-import angularMaterialModule from 'angular-material';
+import angular from 'angular';
 
 import CountdownController from './countdown-controller';
 import CountdownDirective from './countdown-directive';
 
-const module = angular.module('app.countdown-directive', [angularMaterialModule.name]);
+const module = angular.module('app.countdown-directive', ['ngMaterial']);
 
 CountdownController.register(module);
 CountdownDirective.register(module);

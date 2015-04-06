@@ -12,6 +12,8 @@ System.config({
     "angular": "github:angular/bower-angular@1.3.15",
     "angular-material": "github:angular/bower-material@0.8.3",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.13",
+    "array-shuffle": "npm:array-shuffle@1.0.0",
+    "css": "github:systemjs/plugin-css@0.1.9",
     "text": "github:systemjs/plugin-text@0.0.2",
     "github:angular-ui/ui-router@0.2.13": {
       "angular": "github:angular/bower-angular@1.3.15"
@@ -26,7 +28,7 @@ System.config({
       "angular": "github:angular/bower-angular@1.3.15",
       "angular-animate": "github:angular/bower-angular-animate@1.3.15",
       "angular-aria": "github:angular/bower-angular-aria@1.3.15",
-      "css": "github:systemjs/plugin-css@0.1.7"
+      "css": "github:systemjs/plugin-css@0.1.9"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -66,8 +68,8 @@ System.config({
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
     },
-    "github:systemjs/plugin-css@0.1.7": {
-      "clean-css": "npm:clean-css@3.0.10",
+    "github:systemjs/plugin-css@0.1.9": {
+      "clean-css": "npm:clean-css@3.1.9",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0"
     },
@@ -85,9 +87,9 @@ System.config({
       "ieee754": "npm:ieee754@1.1.4",
       "is-array": "npm:is-array@1.0.1"
     },
-    "npm:clean-css@3.0.10": {
+    "npm:clean-css@3.1.9": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "commander": "npm:commander@2.5.1",
+      "commander": "npm:commander@2.6.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "http": "github:jspm/nodelibs-http@1.7.1",
       "https": "github:jspm/nodelibs-https@0.1.0",
@@ -98,7 +100,7 @@ System.config({
       "url": "github:jspm/nodelibs-url@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:commander@2.5.1": {
+    "npm:commander@2.6.0": {
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "events": "github:jspm/nodelibs-events@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
